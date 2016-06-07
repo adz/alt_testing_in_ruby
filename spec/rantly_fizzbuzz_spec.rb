@@ -18,7 +18,7 @@ describe 'Fizzbuzz' do
   it 'will return Fizzbuzz.fizzbuzz for multiples of 3 and 5' do
     property_of {
       i = integer
-      guard i % 3 == 0 #&& i % 5 != 0 # Comment out one and see poor error
+      guard i % 3 == 0 && i % 5 != 0 # Comment out one and see poor error
       i
     }.check { |i|
       expect(Fizzbuzz.fizzbuzz(i)).to eq 'fizz'
